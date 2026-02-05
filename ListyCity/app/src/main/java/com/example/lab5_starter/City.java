@@ -2,10 +2,11 @@ package com.example.lab5_starter;
 
 import java.io.Serializable;
 
-// Movie object
+// City object
 public class City implements Serializable {
 
     // attributes
+    private String id;           // ADD THIS LINE
     private String name;
     private String province;
 
@@ -15,6 +16,20 @@ public class City implements Serializable {
         this.province = province;
     }
 
+    // ADD: Empty constructor (required for Firestore)
+    public City() {
+    }
+
+    // ADD THESE TWO METHODS
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    // Existing getters and setters
     public String getProvince() {
         return province;
     }
